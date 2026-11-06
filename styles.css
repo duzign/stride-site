@@ -552,6 +552,12 @@ a:focus-visible,
   padding-bottom: 24px;
 }
 
+.footer-note {
+  flex-basis: 100%;
+  max-width: 44em;
+  font-size: 0.8rem;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
