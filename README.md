@@ -8,4 +8,4 @@ Public marketing site for [Stride](https://stride.duzign.nl), served by GitHub P
 
 Preview locally: `python3 -m http.server 8000`, then open http://localhost:8000.
 
-Screenshots in `img/` come from a local Stride run against an empty database with fictional pupils, groups and trainer (never production data).
+Screenshots in `img/` come from a local Stride run against an empty database with fictional pupils, groups and trainer (never production data), in light (`name.webp`) and dark (`name-dark.webp`); the theme toggle swaps them.

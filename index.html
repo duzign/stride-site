@@ -23,7 +23,15 @@
       type="font/woff2"
       crossorigin
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css?v=2" />
+    <script>
+      try {
+        const theme = localStorage.getItem("theme");
+        if (theme === "light" || theme === "dark") {
+          document.documentElement.dataset.theme = theme;
+        }
+      } catch {}
+    </script>
   </head>
   <body>
     <header class="hero">
@@ -32,7 +40,29 @@
           <img src="favicon.svg" alt="" width="32" height="32" />
           <span>Stride</span>
         </a>
-        <a class="nav-link" href="#contact">Contact</a>
+        <div class="nav-actions">
+          <a class="nav-link" href="#contact">Contact</a>
+          <button
+            class="theme-switch"
+            type="button"
+            role="switch"
+            aria-checked="false"
+            aria-label="Donkere modus"
+          >
+            <span class="theme-switch-track" aria-hidden="true">
+              <span class="theme-switch-thumb"></span>
+              <svg class="icon-sun" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="4" />
+                <path
+                  d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"
+                />
+              </svg>
+              <svg class="icon-moon" viewBox="0 0 24 24">
+                <path d="M20 14.5A8 8 0 019.5 4a8 8 0 1010.5 10.5z" />
+              </svg>
+            </span>
+          </button>
+        </div>
       </nav>
 
       <div class="hero-grid wrap">
@@ -52,10 +82,12 @@
         <figure class="phone hero-phone">
           <div class="screen">
             <img
-              src="img/beoordelen.webp"
+              src="img/leerling.webp"
+              data-dark="img/leerling-dark.webp"
+              fetchpriority="high"
               width="390"
               height="844"
-              alt="Beoordelingsscherm in Stride: een vaardigheid van niveau 5 met de hele groep onder elkaar, per leerling knoppen voor onvoldoende, neutraal en goed."
+              alt="Overzicht van een leerling in Stride: niveau 2 tot en met 5 afgerond met datum en beker, niveau 6 onderweg."
             />
           </div>
         </figure>
@@ -67,7 +99,7 @@
         <div class="split">
           <div>
             <p class="overline">Tijdens de les</p>
-            <h2 id="lesson-title">Beoordelen kost één tik</h2>
+            <h2 id="lesson-title">Beoordelen in één tik</h2>
           </div>
           <div class="prose">
             <p>
@@ -94,6 +126,7 @@
               <div class="screen">
                 <img
                   src="img/groepbeoordelen.webp"
+                  data-dark="img/groepbeoordelen-dark.webp"
                   width="390"
                   height="844"
                   loading="lazy"
@@ -110,6 +143,7 @@
               <div class="screen">
                 <img
                   src="img/leerlingniveau.webp"
+                  data-dark="img/leerlingniveau-dark.webp"
                   width="390"
                   height="844"
                   loading="lazy"
@@ -126,6 +160,7 @@
               <div class="screen">
                 <img
                   src="img/home.webp"
+                  data-dark="img/home-dark.webp"
                   width="390"
                   height="844"
                   loading="lazy"
@@ -169,23 +204,23 @@
               <div class="phone">
                 <div class="screen">
                   <img
-                    src="img/leerling.webp"
+                    src="img/groep.webp"
+                    data-dark="img/groep-dark.webp"
                     width="390"
                     height="844"
                     loading="lazy"
-                    alt="Overzicht van een leerling: groepen en per niveau wanneer het is afgerond."
+                    alt="Een groep met per niveau hoeveel leerlingen het hebben afgerond."
                   />
                 </div>
               </div>
-              <figcaption>
-                Per leerling zie je welke niveaus af zijn, en wanneer.
-              </figcaption>
+              <figcaption>Per groep zie je hoe ver iedereen is.</figcaption>
             </figure>
             <figure>
               <div class="phone">
                 <div class="screen">
                   <img
                     src="img/bandje.webp"
+                    data-dark="img/bandje-dark.webp"
                     width="390"
                     height="844"
                     loading="lazy"
@@ -247,5 +282,35 @@
         <a href="mailto:jelmer@duzign.nl">jelmer@duzign.nl</a>
       </div>
     </footer>
+    <script>
+      (() => {
+        const root = document.documentElement;
+        const button = document.querySelector(".theme-switch");
+        const systemDark = matchMedia("(prefers-color-scheme: dark)");
+        const isDark = () =>
+          root.dataset.theme
+            ? root.dataset.theme === "dark"
+            : systemDark.matches;
+
+        function render() {
+          const dark = isDark();
+          button.setAttribute("aria-checked", String(dark));
+          document.querySelectorAll("img[data-dark]").forEach((img) => {
+            img.dataset.light ??= img.getAttribute("src");
+            img.src = dark ? img.dataset.dark : img.dataset.light;
+          });
+        }
+
+        button.addEventListener("click", () => {
+          root.dataset.theme = isDark() ? "light" : "dark";
+          try {
+            localStorage.setItem("theme", root.dataset.theme);
+          } catch {}
+          render();
+        });
+        systemDark.addEventListener("change", render);
+        render();
+      })();
+    </script>
   </body>
 </html>

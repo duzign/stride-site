@@ -1,11 +1,11 @@
 /* Colours, radii and type follow the Stride design system (tokens.json in the app repo). */
 
 @font-face {
-  font-family: 'Lexend';
+  font-family: "Lexend";
   font-style: normal;
   font-weight: 400 600;
   font-display: swap;
-  src: url('fonts/lexend-latin.woff2') format('woff2');
+  src: url("fonts/lexend-latin.woff2") format("woff2");
 }
 
 :root {
@@ -38,6 +38,7 @@
   --level-5: #9a4893;
   --level-7: #4ea88f;
   --on-level-dark: #14212e;
+  --phone-ring: transparent;
   --radius-sm: 8px;
   --radius-md: 14px;
   --radius-lg: 20px;
@@ -46,10 +47,11 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
     --surface: #0e151d;
     --surface-raised: #17212c;
     --header: #1b3550;
+    --phone-ring: rgb(255 255 255 / 0.14);
     --on-header-muted: #b9cde0;
     --ink: #eef2f6;
     --ink-muted: #a3b1c0;
@@ -71,6 +73,36 @@
   }
 }
 
+:root[data-theme="dark"] {
+  --surface: #0e151d;
+  --surface-raised: #17212c;
+  --header: #1b3550;
+  --phone-ring: rgb(255 255 255 / 0.14);
+  --on-header-muted: #b9cde0;
+  --ink: #eef2f6;
+  --ink-muted: #a3b1c0;
+  --line-strong: #6b7b8b;
+  --primary: #8fb6da;
+  --on-primary: #0e151d;
+  --primary-strong: #b5cfe8;
+  --primary-soft: #1e3247;
+  --accent-strong: #f0c26e;
+  --status-failed: #f79a6a;
+  --status-neutral: #8e9aa7;
+  --status-passed: #6fcf97;
+  --on-status: #0f1720;
+  --focus: #b5cfe8;
+  --inverse-surface: #eef2f6;
+  --on-inverse: #17212c;
+  --inverse-action: #2f4a61;
+  --level-5: #b25dab;
+  color-scheme: dark;
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+}
+
 *,
 *::before,
 *::after {
@@ -83,7 +115,7 @@ html {
 
 body {
   margin: 0;
-  font-family: 'Lexend', system-ui, sans-serif;
+  font-family: "Lexend", system-ui, sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.55;
@@ -239,6 +271,83 @@ a:focus-visible,
   text-decoration: underline;
 }
 
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Theme switch: a pill with a sliding thumb under the active icon (sun = light, moon = dark). */
+.theme-switch {
+  display: inline-grid;
+  place-items: center;
+  min-width: 48px;
+  min-height: 48px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.theme-switch:focus-visible {
+  outline: none;
+}
+
+.theme-switch-track {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 68px;
+  height: 36px;
+  padding: 0 9px;
+  border-radius: 999px;
+  background: rgb(255 255 255 / 0.16);
+  transition: background-color 120ms;
+}
+
+.theme-switch:hover .theme-switch-track {
+  background: rgb(255 255 255 / 0.24);
+}
+
+.theme-switch:focus-visible .theme-switch-track {
+  outline: 2px solid var(--on-header);
+  outline-offset: 2px;
+}
+
+.theme-switch-thumb {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  background: var(--on-header);
+  box-shadow: 0 1px 3px rgb(0 0 0 / 0.25);
+  transition: transform 160ms ease;
+}
+
+.theme-switch[aria-checked="true"] .theme-switch-thumb {
+  transform: translateX(32px);
+}
+
+.theme-switch-track svg {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: var(--on-header-muted);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: stroke 160ms;
+}
+
+.theme-switch[aria-checked="false"] .icon-sun,
+.theme-switch[aria-checked="true"] .icon-moon {
+  stroke: var(--header);
+}
+
 .hero-grid {
   display: grid;
   gap: 48px;
@@ -274,7 +383,9 @@ a:focus-visible,
   border-radius: 40px;
   padding: 7px;
   background: #0b1219;
-  box-shadow: 0 20px 50px rgb(0 0 0 / 0.28);
+  box-shadow:
+    0 0 0 1px var(--phone-ring),
+    0 20px 50px rgb(0 0 0 / 0.28);
 }
 
 /* The status bar takes the app header colour, so every screenshot (which starts with the header) runs on seamlessly. */
@@ -283,11 +394,11 @@ a:focus-visible,
   overflow: hidden;
   border-radius: 33px;
   padding-top: 30px;
-  background: #2f5d86;
+  background: var(--header);
 }
 
 .screen::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 9px;
   left: 50%;
@@ -446,7 +557,9 @@ a:focus-visible,
     scroll-behavior: auto;
   }
 
-  .btn {
+  .btn,
+  .theme-switch-thumb,
+  .theme-switch-track svg {
     transition: none;
   }
 }
