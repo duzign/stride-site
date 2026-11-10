@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Inloggen in Stride · Uitleg voor trainers</title>
+    <meta
+      name="description"
+      content="Zo log je in bij Stride: de eerste keer met de uitnodigingslink van je club, daarna met je e-mailadres en een code. Geen wachtwoord nodig."
+    />
+    <meta name="theme-color" content="#2f5d86" />
+    <meta property="og:title" content="Inloggen in Stride" />
+    <meta
+      property="og:description"
+      content="Geen wachtwoord: je logt in met je e-mailadres en een code uit je mail."
+    />
+    <meta property="og:type" content="article" />
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link
+      rel="preload"
+      href="../fonts/lexend-latin.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="../styles.css?v=3" />
+    <script>
+      try {
+        const theme = localStorage.getItem("theme");
+        if (theme === "light" || theme === "dark") {
+          document.documentElement.dataset.theme = theme;
+        }
+      } catch {}
+    </script>
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="nav wrap" aria-label="Hoofdmenu">
+        <a class="brand" href="../" aria-label="Stride, naar de startpagina">
+          <img src="../favicon.svg" alt="" width="32" height="32" />
+          <span>Stride</span>
+        </a>
+        <div class="nav-actions">
+          <a class="nav-link" href="../#contact">Contact</a>
+          <button
+            class="theme-switch"
+            type="button"
+            role="switch"
+            aria-checked="false"
+            aria-label="Donkere modus"
+          >
+            <span class="theme-switch-track" aria-hidden="true">
+              <span class="theme-switch-thumb"></span>
+              <svg class="icon-sun" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="4" />
+                <path
+                  d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"
+                />
+              </svg>
+              <svg class="icon-moon" viewBox="0 0 24 24">
+                <path d="M20 14.5A8 8 0 019.5 4a8 8 0 1010.5 10.5z" />
+              </svg>
+            </span>
+          </button>
+        </div>
+      </nav>
+
+      <div class="wrap help-hero">
+        <p class="overline help-hero-overline">Uitleg voor trainers</p>
+        <h1>Zo log je in bij Stride</h1>
+        <p class="lead">
+          Je hebt geen wachtwoord nodig. Je logt in met je e-mailadres en krijgt
+          een code in je mail. De eerste keer gebruik je een uitnodigingslink
+          van je clubbeheerder.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-hero" href="#eerste-keer">De eerste keer</a>
+          <a class="btn btn-ghost" href="#daarna">Ik heb al toegang</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section wrap" aria-labelledby="kort-title">
+        <p class="overline">In het kort</p>
+        <h2 id="kort-title">Wat je moet weten</h2>
+        <div class="facts">
+          <div class="fact">
+            <h3>Geen wachtwoord</h3>
+            <p class="muted">
+              Je vult je e-mailadres in en krijgt elke keer een nieuwe code per
+              mail. Elk adres werkt: Gmail, Hotmail, Outlook of een ander.
+            </p>
+          </div>
+          <div class="fact">
+            <h3>Eén keer een uitnodiging</h3>
+            <p class="muted">
+              Je clubbeheerder stuurt je een link. Die open je één keer om
+              toegang tot je club te krijgen.
+            </p>
+          </div>
+          <div class="fact">
+            <h3>Alles blijft bewaard</h3>
+            <p class="muted">
+              Gebruikte je Stride al? Je groepen, leerlingen en beoordelingen
+              staan er gewoon nog.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="eerste-keer"
+        class="section band"
+        aria-labelledby="eerste-title"
+      >
+        <div class="wrap">
+          <p class="overline">Eenmalig, ongeveer twee minuten</p>
+          <h2 id="eerste-title">De eerste keer inloggen</h2>
+          <ol class="steps">
+            <li class="step">
+              <div class="step-text">
+                <span class="step-num">1</span>
+                <h3>Open de uitnodigingslink</h3>
+                <p>
+                  Je clubbeheerder stuurt je een link via WhatsApp of e-mail.
+                  Tik erop, het liefst op de telefoon die je ook bij de training
+                  gebruikt.
+                </p>
+                <p class="step-tip">
+                  De link werkt 14 dagen en maar één keer. Deel hem niet met
+                  anderen.
+                </p>
+              </div>
+              <div class="phone mock-phone" aria-hidden="true">
+                <div class="screen">
+                  <div class="mock mock-chat">
+                    <div class="mock-chat-top">
+                      <span class="mock-avatar">CB</span>Clubbeheerder
+                    </div>
+                    <div class="mock-chat-body">
+                      <div class="mock-bubble">
+                        Hoi Sanne, je bent uitgenodigd voor Stride. Open de link
+                        en log in:<br /><span class="mock-link mock-tap"
+                          >dijc.strideapp.nl/uitnodiging/…</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="step">
+              <div class="step-text">
+                <span class="step-num">2</span>
+                <h3>Tik op Inloggen</h3>
+                <p>
+                  Je ziet het inlogscherm van je club. Tik op de gele knop
+                  <strong>Inloggen</strong>.
+                </p>
+              </div>
+              <div class="phone mock-phone" aria-hidden="true">
+                <div class="screen">
+                  <div class="mock mock-login">
+                    <div class="mock-login-card">
+                      <span class="mock-club">D</span>
+                      <strong>DIJC</strong>
+                      <span class="muted">Kunstschaatsen</span>
+                      <span class="mock-btn mock-btn-gold mock-tap"
+                        >Inloggen</span
+                      >
+                    </div>
+                    <p class="mock-foot">Voortgang bijhouden met Stride</p>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="step">
+              <div class="step-text">
+                <span class="step-num">3</span>
+                <h3>Vul je e-mailadres in</h3>
+                <p>
+                  Er opent een blauw inlogscherm van Stride. Vul je e-mailadres
+                  in en ga verder.
+                </p>
+                <p class="step-tip">
+                  Gebruik daarna altijd hetzelfde e-mailadres. Met een ander
+                  adres kom je niet bij jouw groepen.
+                </p>
+              </div>
+              <div class="phone mock-phone" aria-hidden="true">
+                <div class="screen">
+                  <div class="mock mock-signin">
+                    <div class="mock-signin-card">
+                      <span class="mock-signin-logo">Stride</span>
+                      <strong>Inloggen</strong>
+                      <span class="mock-input">sanne@voorbeeld.nl</span>
+                      <span class="mock-small"
+                        >Log in met je e-mailadres. Je krijgt een code per mail;
+                        kijk ook in je spam.</span
+                      >
+                      <span class="mock-signin-btn mock-tap">Volgende</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="step">
+              <div class="step-text">
+                <span class="step-num">4</span>
+                <h3>Neem de code over uit je mail</h3>
+                <p>
+                  Binnen een minuut krijg je een mail met een code van cijfers.
+                  Typ die code in het inlogscherm.
+                </p>
+                <p class="step-tip">
+                  Geen mail? Kijk in je map Spam of Reclame. De allereerste keer
+                  vraagt het scherm ook je naam.
+                </p>
+              </div>
+              <div class="phone mock-phone" aria-hidden="true">
+                <div class="screen">
+                  <div class="mock mock-mail">
+                    <div class="mock-mail-from">
+                      <span class="mock-avatar">S</span>
+                      <span
+                        ><strong>Stride</strong><br /><span class="muted"
+                          >Je code om in te loggen</span
+                        ></span
+                      >
+                    </div>
+                    <p>Gebruik deze code om in te loggen:</p>
+                    <p class="mock-code">482 913</p>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="step">
+              <div class="step-text">
+                <span class="step-num">5</span>
+                <h3>Accepteer de uitnodiging</h3>
+                <p>
+                  Je komt terug in Stride. Tik op
+                  <strong>Uitnodiging accepteren</strong> en je ziet meteen je
+                  groepen. Dit hoef je maar één keer te doen.
+                </p>
+              </div>
+              <div class="phone mock-phone" aria-hidden="true">
+                <div class="screen">
+                  <div class="mock mock-app">
+                    <div class="mock-app-head">
+                      <strong>Uitnodiging</strong><span>DIJC</span>
+                    </div>
+                    <div class="mock-app-sheet">
+                      <p class="mock-notice">
+                        Sanne, je bent uitgenodigd voor DIJC als trainer.
+                      </p>
+                      <span class="mock-btn mock-btn-primary mock-tap"
+                        >Uitnodiging accepteren</span
+                      >
+                      <span class="mock-ghost">Uitloggen</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section id="daarna" class="section wrap" aria-labelledby="daarna-title">
+        <p class="overline">Bij elke training</p>
+        <h2 id="daarna-title">Daarna</h2>
+        <p class="prose">
+          Open Stride via het adres van je club. Dat is de clubnaam voor
+          <strong>.strideapp.nl</strong>, bijvoorbeeld
+          <a href="https://dijc.strideapp.nl">dijc.strideapp.nl</a>. De
+          uitnodigingslink heb je niet meer nodig.
+        </p>
+        <div class="facts">
+          <div class="fact">
+            <h3>Meestal ben je nog ingelogd</h3>
+            <p class="muted">
+              Dan zie je meteen je groepen. Zo niet: tik op Inloggen, vul je
+              e-mailadres in en neem de nieuwe code over.
+            </p>
+          </div>
+          <div class="fact">
+            <h3>Zet Stride op je beginscherm</h3>
+            <p class="muted">
+              iPhone: in Safari de deelknop, dan "Zet op beginscherm". Android:
+              in Chrome het menu met drie puntjes, dan "Toevoegen aan
+              startscherm".
+            </p>
+          </div>
+          <div class="fact">
+            <h3>Uitloggen</h3>
+            <p class="muted">
+              Op het startscherm van Stride, via de knop rechtsboven. Handig op
+              een gedeelde telefoon of tablet.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section band" aria-labelledby="hulp-title">
+        <div class="wrap">
+          <p class="overline">Lukt het niet?</p>
+          <h2 id="hulp-title">Wat je kunt tegenkomen</h2>
+          <div class="faq">
+            <div class="faq-item">
+              <h3>Ik krijg geen code</h3>
+              <p class="muted">
+                Kijk in je map Spam of Reclame en wacht een minuut. Nog steeds
+                niets? Ga terug en vraag een nieuwe code aan, en controleer of
+                je e-mailadres goed gespeld is.
+              </p>
+            </div>
+            <div class="faq-item">
+              <h3>"Geen toegang"</h3>
+              <p class="muted">
+                Je bent ingelogd, maar je hebt de uitnodiging nog niet
+                geaccepteerd, of je gebruikt een ander e-mailadres dan de eerste
+                keer. Log uit en log in met je vaste adres. Werkt dat niet,
+                vraag je clubbeheerder dan om een nieuwe link.
+              </p>
+            </div>
+            <div class="faq-item">
+              <h3>"Deze uitnodiging is verlopen"</h3>
+              <p class="muted">
+                De link is ouder dan 14 dagen. Vraag je clubbeheerder om een
+                nieuwe.
+              </p>
+            </div>
+            <div class="faq-item">
+              <h3>"Deze uitnodiging is al gebruikt"</h3>
+              <p class="muted">
+                Heb je hem zelf al geaccepteerd? Dan ben je klaar en open je
+                gewoon het adres van je club. Anders vraag je je clubbeheerder
+                om een nieuwe link.
+              </p>
+            </div>
+            <div class="faq-item">
+              <h3>Ik wil ook op mijn tablet of laptop</h3>
+              <p class="muted">
+                Open het adres van je club op dat apparaat en log in met
+                hetzelfde e-mailadres. Een nieuwe uitnodiging is niet nodig.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section wrap" aria-labelledby="beheer-title">
+        <div class="admin-note">
+          <p class="overline">Voor clubbeheerders</p>
+          <h2 id="beheer-title">Een trainer uitnodigen</h2>
+          <p class="prose">
+            Ga in Stride naar <strong>Trainers</strong> en tik op
+            <strong>Trainer uitnodigen</strong>. Kies
+            <strong>Bestaande trainer</strong> voor iemand die al in Stride
+            stond, dan houdt die zijn of haar groepen en beoordelingen. Deel de
+            link via WhatsApp of e-mail, of kopieer hem.
+          </p>
+        </div>
+        <p class="muted help-foot">
+          Namen en codes op deze pagina zijn voorbeelden.
+        </p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="wrap footer-inner">
+        <span>Stride is gemaakt door DuZign.</span>
+        <a href="mailto:jelmer@duzign.nl">jelmer@duzign.nl</a>
+      </div>
+    </footer>
+    <script>
+      (() => {
+        const root = document.documentElement;
+        const button = document.querySelector(".theme-switch");
+        const systemDark = matchMedia("(prefers-color-scheme: dark)");
+        const isDark = () =>
+          root.dataset.theme
+            ? root.dataset.theme === "dark"
+            : systemDark.matches;
+
+        function render() {
+          button.setAttribute("aria-checked", String(isDark()));
+        }
+
+        button.addEventListener("click", () => {
+          root.dataset.theme = isDark() ? "light" : "dark";
+          try {
+            localStorage.setItem("theme", root.dataset.theme);
+          } catch {}
+          render();
+        });
+        systemDark.addEventListener("change", render);
+        render();
+      })();
+    </script>
+  </body>
+</html>
