@@ -952,3 +952,55 @@ a:focus-visible,
   margin-top: 40px;
   font-size: 0.9rem;
 }
+
+/* Admin help page (inloggen/beheerders/): list, form and link sketches. */
+
+.mock {
+  overflow: hidden;
+}
+
+.mock-overline {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+
+.mock-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 8px;
+  border-radius: 10px;
+  background: var(--surface-raised);
+  line-height: 1.3;
+}
+
+.mock-choice {
+  display: grid;
+  padding: 7px 10px;
+  border-radius: 10px;
+  background: var(--surface-raised);
+  line-height: 1.3;
+}
+
+.mock-choice.is-on {
+  box-shadow: inset 0 0 0 2px var(--primary);
+}
+
+.mock-select {
+  padding: 7px 10px;
+  border-radius: 8px;
+  box-shadow: inset 0 0 0 1.5px var(--line-strong);
+  overflow-wrap: anywhere;
+}
+
+.mock-btn-outline {
+  color: var(--primary);
+  box-shadow: inset 0 0 0 1.5px var(--line-strong);
+}
+
+.step-text-only {
+  grid-template-columns: 1fr;
+}

@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Trainers uitnodigen in Stride · Uitleg voor clubbeheerders</title>
+    <meta
+      name="description"
+      content="Zo geef je als clubbeheerder trainers toegang tot Stride: een uitnodigingslink maken, rollen kiezen en toegang intrekken."
+    />
+    <meta name="theme-color" content="#2f5d86" />
+    <meta property="og:title" content="Trainers uitnodigen in Stride" />
+    <meta
+      property="og:description"
+      content="Uitleg voor clubbeheerders: uitnodigen, rollen en toegang beheren."
+    />
+    <meta property="og:type" content="article" />
+    <link rel="icon" href="../../favicon.svg" type="image/svg+xml" />
+    <link
+      rel="preload"
+      href="../../fonts/lexend-latin.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="../../styles.css?v=4" />
+    <script>
+      try {
+        const theme = localStorage.getItem("theme");
+        if (theme === "light" || theme === "dark") {
+          document.documentElement.dataset.theme = theme;
+        }
+      } catch {}
+    </script>
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="nav wrap" aria-label="Hoofdmenu">
+        <a class="brand" href="../../" aria-label="Stride, naar de startpagina">
+          <img src="../../favicon.svg" alt="" width="32" height="32" />
+          <span>Stride</span>
+        </a>
+        <div class="nav-actions">
+          <a class="nav-link" href="../">Inloggen</a>
+          <button
+            class="theme-switch"
+            type="button"
+            role="switch"
+            aria-checked="false"
+            aria-label="Donkere modus"
+          >
+            <span class="theme-switch-track" aria-hidden="true">
+              <span class="theme-switch-thumb"></span>
+              <svg class="icon-sun" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="4" />
+                <path
+                  d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"
+                />
+              </svg>
+              <svg class="icon-moon" viewBox="0 0 24 24">
+                <path d="M20 14.5A8 8 0 019.5 4a8 8 0 1010.5 10.5z" />
+              </svg>
+            </span>
+          </button>
+        </div>
+      </nav>
+
+      <div class="wrap help-hero">
+        <p class="overline help-hero-overline">Uitleg voor clubbeheerders</p>
+        <h1>Trainers uitnodigen en toegang beheren</h1>
+        <p class="lead">
+          Iedereen kan een account maken met zijn e-mailadres, maar alleen een
+          uitnodiging van een clubbeheerder geeft toegang tot jullie club. Zo
+          bepaal jij wie er in Stride werkt.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-hero" href="#uitnodigen">Een trainer uitnodigen</a>
+          <a class="btn btn-ghost" href="../">Uitleg voor trainers</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section wrap" aria-labelledby="rollen-title">
+        <p class="overline">Twee rollen</p>
+        <h2 id="rollen-title">Wie mag wat?</h2>
+        <div class="facts">
+          <div class="fact">
+            <h3>Trainer</h3>
+            <p class="muted">
+              Beoordeelt leerlingen, maakt en wijzigt groepen en voegt
+              leerlingen toe. Het werk op de training.
+            </p>
+          </div>
+          <div class="fact">
+            <h3>Clubbeheerder</h3>
+            <p class="muted">
+              Alles wat een trainer kan, en ook: leerlingen en groepen
+              verwijderen, beoordelingen terugzetten, afronddatums en bandjes
+              beheren, en trainers uitnodigen of hun toegang intrekken.
+            </p>
+          </div>
+          <div class="fact">
+            <h3>Altijd minstens één clubbeheerder</h3>
+            <p class="muted">
+              De laatste clubbeheerder kan geen trainer worden en zijn toegang
+              niet kwijtraken. Je eigen rol wijzig je niet zelf; dat doet een
+              andere clubbeheerder.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="uitnodigen"
+        class="section band"
+        aria-labelledby="uitnodigen-title"
+      >
+        <div class="wrap">
+          <p class="overline">Per trainer, een minuut</p>
+          <h2 id="uitnodigen-title">Een trainer uitnodigen</h2>
+          <ol class="steps">
+            <li class="step">
+              <div class="step-text">
+                <span class="step-num">1</span>
+                <h3>Open Trainers</h3>
+                <p>
+                  Tik op het startscherm op de tegel <strong>Trainers</strong>.
+                  Die zie je alleen als clubbeheerder. Onder
+                  <strong>Toegang</strong> staat wie er al in kan, onder
+                  <strong>Uitnodigingen</strong> wie nog niet heeft
+                  geaccepteerd. Tik onderaan op
+                  <strong>Trainer uitnodigen</strong>.
+                </p>
+              </div>
+              <div class="phone mock-phone" aria-hidden="true">
+                <div class="screen">
+                  <div class="mock mock-app">
+                    <div class="mock-app-head">
+                      <strong>Trainers</strong><span>DIJC</span>
+                    </div>
+                    <div class="mock-app-sheet">
+                      <span class="mock-overline">Toegang</span>
+                      <span class="mock-row"
+                        ><span class="mock-avatar">PB</span
+                        ><span
+                          ><strong>Petra Bos (jij)</strong><br /><span
+                            class="muted"
+                            >Clubbeheerder</span
+                          ></span
+                        ></span
+                      >
+                      <span class="mock-row"
+                        ><span class="mock-avatar">KV</span
+                        ><span
+                          ><strong>Kees de Vries</strong><br /><span
+                            class="muted"
+                            >Trainer</span
+                          ></span
+                        ></span
+                      >
+                      <span class="mock-overline">Uitnodigingen</span>
+                      <span class="mock-row"
+                        ><span class="mock-avatar">SJ</span
+                        ><span
+                          ><strong>Sanne Jansen</strong><br /><span
+                            class="muted"
+                            >Trainer · verloopt 24 nov 2026</span
+                          ></span
+                        ></span
+                      >
+                      <span class="mock-btn mock-btn-outline mock-tap"
+                        >Trainer uitnodigen</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="step">
+              <div class="step-text">
+                <span class="step-num">2</span>
+                <h3>Kies wie en welke rol</h3>
+                <p>
+                  <strong>Bestaande trainer</strong>: iemand die al in Stride
+                  stond. Kies de naam uit de lijst; groepen en beoordelingen
+                  blijven dan van hem of haar. <strong>Nieuwe trainer</strong>:
+                  iemand die nog niet in Stride stond. Vul de naam in.
+                </p>
+                <p>
+                  Kies daarna de rol en tik op
+                  <strong>Uitnodiging maken</strong>.
+                </p>
+                <p class="step-tip">
+                  Twijfel je? Kies Bestaande trainer als de naam in de lijst
+                  staat. Zo raakt niemand zijn geschiedenis kwijt.
+                </p>
+              </div>
+              <div class="phone mock-phone" aria-hidden="true">
+                <div class="screen">
+                  <div class="mock mock-app">
+                    <div class="mock-app-head">
+                      <strong>Trainer uitnodigen</strong><span>DIJC</span>
+                    </div>
+                    <div class="mock-app-sheet">
+                      <span class="mock-overline">Wie</span>
+                      <span class="mock-choice is-on"
+                        ><strong>Bestaande trainer</strong
+                        ><span class="muted"
+                          >Houdt groepen en beoordelingen</span
+                        ></span
+                      >
+                      <span class="mock-choice"
+                        ><strong>Nieuwe trainer</strong
+                        ><span class="muted"
+                          >Nog niet eerder in Stride</span
+                        ></span
+                      >
+                      <span class="mock-select">Sanne Jansen</span>
+                      <span class="mock-overline">Rol</span>
+                      <span class="mock-choice is-on"
+                        ><strong>Trainer</strong></span
+                      >
+                      <span class="mock-btn mock-btn-primary mock-tap"
+                        >Uitnodiging maken</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="step">
+              <div class="step-text">
+                <span class="step-num">3</span>
+                <h3>Stuur de link</h3>
+                <p>
+                  Je krijgt een uitnodigingslink. Stuur die met
+                  <strong>Delen</strong> (bijvoorbeeld via WhatsApp),
+                  <strong>Link kopiëren</strong> of <strong>Mailen</strong>.
+                  Mailen zet er meteen een korte uitleg bij.
+                </p>
+                <p class="step-tip">
+                  Je ziet de link maar één keer. Kwijt? Trek de uitnodiging in
+                  en maak een nieuwe. De link werkt 14 dagen en maar één keer.
+                </p>
+              </div>
+              <div class="phone mock-phone" aria-hidden="true">
+                <div class="screen">
+                  <div class="mock mock-app">
+                    <div class="mock-app-head">
+                      <strong>Trainer uitnodigen</strong><span>DIJC</span>
+                    </div>
+                    <div class="mock-app-sheet">
+                      <p class="mock-notice">
+                        Stuur deze link naar Sanne Jansen. Hij werkt 14 dagen en
+                        één keer.
+                      </p>
+                      <span class="mock-select"
+                        >dijc.strideapp.nl/uitnodiging/…</span
+                      >
+                      <span class="mock-btn mock-btn-primary mock-tap"
+                        >Delen</span
+                      >
+                      <span class="mock-btn mock-btn-outline"
+                        >Link kopiëren</span
+                      >
+                      <span class="mock-ghost">Mailen</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="step step-text-only">
+              <div class="step-text">
+                <span class="step-num">4</span>
+                <h3>De trainer accepteert</h3>
+                <p>
+                  De trainer opent de link, logt in met zijn e-mailadres en een
+                  code, en tikt op Uitnodiging accepteren. Daarna verhuist de
+                  naam van Uitnodigingen naar Toegang. Stuur de trainer gerust
+                  de
+                  <a href="../">uitleg voor trainers</a> mee.
+                </p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="section wrap" aria-labelledby="beheren-title">
+        <p class="overline">Achter de drie puntjes</p>
+        <h2 id="beheren-title">Toegang beheren</h2>
+        <p class="prose">
+          Tik in Trainers op de drie puntjes naast een naam. Voor je iets
+          intrekt, vraagt Stride het eerst.
+        </p>
+        <div class="facts">
+          <div class="fact">
+            <h3>Rol wijzigen</h3>
+            <p class="muted">
+              Kies <strong>Maak clubbeheerder</strong> of
+              <strong>Maak trainer</strong>. Het geldt meteen.
+            </p>
+          </div>
+          <div class="fact">
+            <h3>Toegang intrekken</h3>
+            <p class="muted">
+              Voor een trainer die stopt. Die kan dan niet meer inloggen bij
+              jullie club. Groepen en beoordelingen blijven bewaard; komt de
+              trainer terug, nodig hem dan uit als Bestaande trainer.
+            </p>
+          </div>
+          <div class="fact">
+            <h3>Uitnodiging intrekken</h3>
+            <p class="muted">
+              Bij een uitnodiging die nog open staat, bijvoorbeeld als je de
+              link naar de verkeerde persoon stuurde. De link werkt daarna niet
+              meer.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section band" aria-labelledby="vragen-title">
+        <div class="wrap">
+          <p class="overline">Als een trainer vastloopt</p>
+          <h2 id="vragen-title">Wat je kunt tegenkomen</h2>
+          <div class="faq">
+            <div class="faq-item">
+              <h3>De trainer ziet "Geen toegang"</h3>
+              <p class="muted">
+                Staat de naam nog onder Uitnodigingen? Dan is de uitnodiging nog
+                niet geaccepteerd: laat de trainer de link opnieuw openen. Staat
+                de naam onder Toegang, dan logt de trainer waarschijnlijk in met
+                een ander e-mailadres dan de eerste keer.
+              </p>
+            </div>
+            <div class="faq-item">
+              <h3>De trainer heeft een nieuw e-mailadres</h3>
+              <p class="muted">
+                Trek de toegang in en nodig de trainer opnieuw uit als Bestaande
+                trainer. Met de nieuwe link en het nieuwe e-mailadres houdt de
+                trainer zijn groepen en beoordelingen.
+              </p>
+            </div>
+            <div class="faq-item">
+              <h3>De uitnodiging is verlopen</h3>
+              <p class="muted">
+                Na 14 dagen verdwijnt hij uit de lijst Uitnodigingen. Maak een
+                nieuwe; de trainer staat dan weer bij Bestaande trainer.
+              </p>
+            </div>
+            <div class="faq-item">
+              <h3>Een naam staat niet bij Bestaande trainer</h3>
+              <p class="muted">
+                Die trainer heeft al toegang of al een open uitnodiging. Kijk in
+                Trainers onder Toegang en Uitnodigingen.
+              </p>
+            </div>
+            <div class="faq-item">
+              <h3>"Er is al een trainer met de naam …"</h3>
+              <p class="muted">
+                Je koos Nieuwe trainer voor iemand die al in Stride staat. Kies
+                Bestaande trainer en die naam uit de lijst.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section wrap" aria-labelledby="overstap-title">
+        <div class="admin-note">
+          <p class="overline">Bij de overstap</p>
+          <h2 id="overstap-title">Iedereen opnieuw uitnodigen</h2>
+          <p class="prose">
+            Met de nieuwe manier van inloggen werkt het oude inloggen niet meer.
+            Nodig daarom elke trainer één keer uit, steeds als
+            <strong>Bestaande trainer</strong>. Begin met een tweede
+            clubbeheerder, zodat er altijd iemand is die kan helpen.
+          </p>
+        </div>
+        <p class="muted help-foot">
+          Namen en datums op deze pagina zijn voorbeelden.
+        </p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="wrap footer-inner">
+        <span>Stride is gemaakt door DuZign.</span>
+        <a href="mailto:jelmer@duzign.nl">jelmer@duzign.nl</a>
+      </div>
+    </footer>
+    <script>
+      (() => {
+        const root = document.documentElement;
+        const button = document.querySelector(".theme-switch");
+        const systemDark = matchMedia("(prefers-color-scheme: dark)");
+        const isDark = () =>
+          root.dataset.theme
+            ? root.dataset.theme === "dark"
+            : systemDark.matches;
+
+        function render() {
+          button.setAttribute("aria-checked", String(isDark()));
+        }
+
+        button.addEventListener("click", () => {
+          root.dataset.theme = isDark() ? "light" : "dark";
+          try {
+            localStorage.setItem("theme", root.dataset.theme);
+          } catch {}
+          render();
+        });
+        systemDark.addEventListener("change", render);
+        render();
+      })();
+    </script>
+  </body>
+</html>
