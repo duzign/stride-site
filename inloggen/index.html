@@ -6,7 +6,7 @@
     <title>Inloggen in Stride · Uitleg voor trainers</title>
     <meta
       name="description"
-      content="Zo log je in bij Stride: de eerste keer met de uitnodigingslink van je club, daarna met je e-mailadres en een code. Geen wachtwoord nodig."
+      content="Zo log je in bij Stride: de eerste keer maak je een account via de uitnodigingslink van je club, daarna log je in met je e-mailadres en een code. Geen wachtwoord nodig."
     />
     <meta name="theme-color" content="#2f5d86" />
     <meta property="og:title" content="Inloggen in Stride" />
@@ -23,7 +23,7 @@
       type="font/woff2"
       crossorigin
     />
-    <link rel="stylesheet" href="../styles.css?v=4" />
+    <link rel="stylesheet" href="../styles.css?v=5" />
     <script>
       try {
         const theme = localStorage.getItem("theme");
@@ -70,8 +70,8 @@
         <h1>Zo log je in bij Stride</h1>
         <p class="lead">
           Je hebt geen wachtwoord nodig. Je logt in met je e-mailadres en krijgt
-          een code in je mail. De eerste keer gebruik je een uitnodigingslink
-          van je clubbeheerder.
+          een code in je mail. De eerste keer maak je een account, via een
+          uitnodigingslink van je clubbeheerder.
         </p>
         <div class="hero-actions">
           <a class="btn btn-hero" href="#eerste-keer">De eerste keer</a>
@@ -93,10 +93,10 @@
             </p>
           </div>
           <div class="fact">
-            <h3>Eén keer een uitnodiging</h3>
+            <h3>Eén keer een account maken</h3>
             <p class="muted">
-              Je clubbeheerder stuurt je een link. Die open je één keer om
-              toegang tot je club te krijgen.
+              Je clubbeheerder stuurt je een link. Die open je één keer: je
+              maakt een account en krijgt toegang tot je club.
             </p>
           </div>
           <div class="fact">
@@ -115,7 +115,7 @@
         aria-labelledby="eerste-title"
       >
         <div class="wrap">
-          <p class="overline">Eenmalig, ongeveer twee minuten</p>
+          <p class="overline">Eenmalig, ongeveer drie minuten</p>
           <h2 id="eerste-title">De eerste keer inloggen</h2>
           <ol class="steps">
             <li class="step">
@@ -180,10 +180,47 @@
             <li class="step">
               <div class="step-text">
                 <span class="step-num">3</span>
+                <h3>Tik op Maak er een</h3>
+                <p>
+                  Er opent een blauw inlogscherm van Stride. Vul hier nog
+                  <strong>niet</strong> je e-mailadres in, want je hebt nog geen
+                  account. Tik onder het invulveld op
+                  <strong>Geen account? Maak er een</strong>.
+                </p>
+                <p class="step-tip">
+                  Vul je toch eerst je e-mailadres in, dan zegt het scherm dat
+                  er geen account is. Ga terug en tik op Maak er een.
+                </p>
+              </div>
+              <div class="phone mock-phone" aria-hidden="true">
+                <div class="screen">
+                  <div class="mock mock-signin">
+                    <div class="mock-signin-card">
+                      <span class="mock-signin-logo">Stride</span>
+                      <strong>Aanmelden</strong>
+                      <span class="mock-input mock-input-empty"
+                        >jij@voorbeeld.nl</span
+                      >
+                      <span class="mock-small"
+                        >Geen account?
+                        <span class="mock-signin-link mock-tap"
+                          >Maak er een</span
+                        ></span
+                      >
+                      <span class="mock-signin-btn">Volgende</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="step">
+              <div class="step-text">
+                <span class="step-num">4</span>
                 <h3>Vul je e-mailadres in</h3>
                 <p>
-                  Er opent een blauw inlogscherm van Stride. Vul je e-mailadres
-                  in en ga verder.
+                  Vul in het scherm voor een nieuw account je e-mailadres in en
+                  ga verder.
                 </p>
                 <p class="step-tip">
                   Gebruik daarna altijd hetzelfde e-mailadres. Met een ander
@@ -195,12 +232,8 @@
                   <div class="mock mock-signin">
                     <div class="mock-signin-card">
                       <span class="mock-signin-logo">Stride</span>
-                      <strong>Inloggen</strong>
+                      <strong>Account maken</strong>
                       <span class="mock-input">sanne@voorbeeld.nl</span>
-                      <span class="mock-small"
-                        >Log in met je e-mailadres. Je krijgt een code per mail;
-                        kijk ook in je spam.</span
-                      >
                       <span class="mock-signin-btn mock-tap">Volgende</span>
                     </div>
                   </div>
@@ -210,15 +243,15 @@
 
             <li class="step">
               <div class="step-text">
-                <span class="step-num">4</span>
+                <span class="step-num">5</span>
                 <h3>Neem de code over uit je mail</h3>
                 <p>
                   Binnen een minuut krijg je een mail met een code van cijfers.
                   Typ die code in het inlogscherm.
                 </p>
                 <p class="step-tip">
-                  Geen mail? Kijk in je map Spam of Reclame. De allereerste keer
-                  vraagt het scherm ook je naam.
+                  Geen mail? Kijk in je map Spam of Reclame. Daarna vraagt het
+                  scherm nog je naam; dan is je account klaar.
                 </p>
               </div>
               <div class="phone mock-phone" aria-hidden="true">
@@ -241,7 +274,7 @@
 
             <li class="step">
               <div class="step-text">
-                <span class="step-num">5</span>
+                <span class="step-num">6</span>
                 <h3>Accepteer de uitnodiging</h3>
                 <p>
                   Je komt terug in Stride. Tik op
@@ -286,7 +319,8 @@
             <h3>Meestal ben je nog ingelogd</h3>
             <p class="muted">
               Dan zie je meteen je groepen. Zo niet: tik op Inloggen, vul je
-              e-mailadres in en neem de nieuwe code over.
+              e-mailadres in (geen nieuw account maken) en neem de nieuwe code
+              over.
             </p>
           </div>
           <div class="fact">
@@ -312,6 +346,14 @@
           <p class="overline">Lukt het niet?</p>
           <h2 id="hulp-title">Wat je kunt tegenkomen</h2>
           <div class="faq">
+            <div class="faq-item">
+              <h3>"Er is geen account met dit e-mailadres gevonden"</h3>
+              <p class="muted">
+                Je hebt nog geen account. Ga terug naar het inlogscherm, tik op
+                <strong>Geen account? Maak er een</strong> en vul daar je
+                e-mailadres in.
+              </p>
+            </div>
             <div class="faq-item">
               <h3>Ik krijg geen code</h3>
               <p class="muted">

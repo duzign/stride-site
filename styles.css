@@ -842,6 +842,15 @@ a:focus-visible,
   color: #5d6b7e;
 }
 
+.mock-input-empty {
+  color: #8a96a6;
+}
+
+.mock-signin-link {
+  color: #2f5d86;
+  text-decoration: underline;
+}
+
 .mock-signin-btn {
   justify-self: end;
   padding: 5px 14px;
