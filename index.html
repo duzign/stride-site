@@ -15,6 +15,20 @@
       content="Bijhouden wat je leerlingen kunnen, gewoon tijdens de les."
     />
     <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://strideapp.nl/" />
+    <meta
+      property="og:image"
+      content="https://strideapp.nl/video/stride-promo-poster.jpg"
+    />
+    <meta property="og:image:width" content="1080" />
+    <meta property="og:image:height" content="1350" />
+    <meta
+      property="og:video"
+      content="https://strideapp.nl/video/stride-promo.mp4"
+    />
+    <meta property="og:video:type" content="video/mp4" />
+    <meta property="og:video:width" content="1080" />
+    <meta property="og:video:height" content="1350" />
     <link rel="icon" href="favicon.ico" sizes="32x32" />
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link
@@ -24,7 +38,7 @@
       type="font/woff2"
       crossorigin
     />
-    <link rel="stylesheet" href="styles.css?v=5" />
+    <link rel="stylesheet" href="styles.css?v=6" />
     <script>
       try {
         const theme = localStorage.getItem("theme");
@@ -84,7 +98,7 @@
           </p>
           <div class="hero-actions">
             <a class="btn btn-hero" href="#contact">Neem contact op</a>
-            <a class="btn btn-ghost" href="#meer">Lees verder</a>
+            <a class="btn btn-ghost" href="#video">Bekijk de video</a>
           </div>
         </div>
 
@@ -104,6 +118,36 @@
     </header>
 
     <main>
+      <section id="video" class="section band" aria-labelledby="video-title">
+        <div class="wrap split video-split">
+          <div>
+            <p class="overline">In 24 seconden</p>
+            <h2 id="video-title">Zo werkt Stride</h2>
+            <div class="prose">
+              <p>
+                Een trainer beoordeelt drie leerlingen tijdens de les, deelt
+                daarna het paspoort, en de leerling ziet op de eigen telefoon
+                wat al goed gaat.
+              </p>
+            </div>
+          </div>
+          <figure class="promo">
+            <video
+              controls
+              playsinline
+              preload="metadata"
+              poster="video/stride-promo-poster.jpg"
+              width="1080"
+              height="1350"
+              aria-label="Promovideo van Stride met muziek: een trainer beoordeelt drie leerlingen met één tik per leerling, deelt het paspoort via QR-code of link, en de leerling ziet op het paspoort wat al goed gaat."
+            >
+              <source src="video/stride-promo.mp4" type="video/mp4" />
+              <a href="video/stride-promo.mp4">Download de video (MP4)</a>
+            </video>
+          </figure>
+        </div>
+      </section>
+
       <section id="meer" class="section wrap" aria-labelledby="lesson-title">
         <div class="split">
           <div>
