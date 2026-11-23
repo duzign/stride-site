@@ -484,6 +484,34 @@ a:focus-visible,
   margin-bottom: 0;
 }
 
+/* Promo video (4:5), next to its intro */
+.video-split {
+  align-items: center;
+}
+
+.video-split .prose {
+  margin-top: 16px;
+}
+
+.promo {
+  justify-self: center;
+  width: 100%;
+  max-width: 440px;
+  margin: 0;
+}
+
+.promo video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  border-radius: var(--radius-xl);
+  background: var(--header);
+  box-shadow:
+    0 0 0 1px var(--phone-ring),
+    0 20px 50px rgb(0 0 0 / 0.28);
+}
+
 .prose {
   max-width: 38em;
   font-size: 1.05rem;
