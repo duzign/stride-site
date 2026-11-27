@@ -6,7 +6,7 @@
     <title>Stride · Vaardigheden bijhouden voor sportclubs</title>
     <meta
       name="description"
-      content="Stride is een app voor het registreren van beoordelingen van vaardigheden binnen de sport. Trainers houden tijdens de training of les eenvoudig de voortgang van hun leerlingen bij, zonder administratie achteraf."
+      content="Stride is een app voor sportclubs: trainers beoordelen vaardigheden tijdens de les met één tik, clubbeheerders regelen sporten, niveaus en trainers, en leerlingen zien hun voortgang in een eigen paspoort."
     />
     <meta name="theme-color" content="#2f5d86" />
     <meta property="og:title" content="Stride" />
@@ -38,7 +38,7 @@
       type="font/woff2"
       crossorigin
     />
-    <link rel="stylesheet" href="styles.css?v=6" />
+    <link rel="stylesheet" href="styles.css?v=7" />
     <script>
       try {
         const theme = localStorage.getItem("theme");
@@ -61,6 +61,7 @@
           <span>Stride</span>
         </a>
         <div class="nav-actions">
+          <a class="nav-link nav-extra" href="#functies">Functies</a>
           <a class="nav-link" href="inloggen/">Inloggen</a>
           <a class="nav-link" href="#contact">Contact</a>
           <button
@@ -90,16 +91,21 @@
         <div class="hero-copy">
           <h1>Bijhouden wat je leerlingen kunnen, gewoon tijdens de les.</h1>
           <p class="lead">
-            Stride is een app voor het registreren van beoordelingen van
-            vaardigheden binnen de sport. Trainers houden tijdens de training of
-            les eenvoudig de voortgang van hun leerlingen bij, zonder
-            administratie achteraf. Die voortgang delen ze direct met hun
-            leerlingen via een persoonlijk paspoort.
+            Trainers beoordelen vaardigheden langs de kant met één tik.
+            Leerlingen zien hun voortgang in een eigen paspoort.
           </p>
           <div class="hero-actions">
             <a class="btn btn-hero" href="#contact">Neem contact op</a>
             <a class="btn btn-ghost" href="#video">Bekijk de video</a>
           </div>
+          <nav class="roles" aria-label="Kies wat bij jou past">
+            <p class="roles-label">Wat wil je weten?</p>
+            <ul class="role-chips">
+              <li><a class="role-chip" href="#trainers">Voor trainers</a></li>
+              <li><a class="role-chip" href="#beheerders">Voor clubbeheerders</a></li>
+              <li><a class="role-chip" href="#leerlingen">Voor leerlingen en ouders</a></li>
+            </ul>
+          </nav>
         </div>
 
         <figure class="phone hero-phone">
@@ -110,7 +116,7 @@
               fetchpriority="high"
               width="390"
               height="844"
-              alt="Overzicht van een leerling in Stride: niveau 2 tot en met 5 afgerond met datum en beker, niveau 6 onderweg."
+              alt="Pagina van een leerling in Stride: groepen in kunstschaatsen en inline skaten, en per niveau de datum waarop het is afgerond."
             />
           </div>
         </figure>
@@ -118,6 +124,85 @@
     </header>
 
     <main>
+      <section id="functies" class="section wrap" aria-labelledby="features-title">
+        <p class="overline">In één oogopslag</p>
+        <h2 id="features-title">Wat Stride kan</h2>
+        <ul class="features">
+          <li>
+            <a class="feature" href="#trainers">
+              <span class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" /><path d="M8 12.5l2.8 2.8L16.5 9" /></svg>
+              </span>
+              <h3>Beoordelen in één tik</h3>
+              <p>Goed, neutraal of onvoldoende. Direct opgeslagen, zo terug te draaien.</p>
+            </a>
+          </li>
+          <li>
+            <a class="feature" href="#beheerders">
+              <span class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M5 20v-6M12 20V9M19 20V4" /></svg>
+              </span>
+              <h3>Eigen niveaus</h3>
+              <p>De club bepaalt de niveaus, de vaardigheden en wanneer een niveau gehaald is.</p>
+            </a>
+          </li>
+          <li>
+            <a class="feature" href="#beheerders">
+              <span class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12 3l9 5-9 5-9-5 9-5z" /><path d="M3 13l9 5 9-5" /></svg>
+              </span>
+              <h3>Meerdere sporten <span class="badge-new">Nieuw</span></h3>
+              <p>Elke sport eigen niveaus en groepen. Eén leerling, alle sporten.</p>
+            </a>
+          </li>
+          <li>
+            <a class="feature" href="#leerlingen">
+              <span class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><rect x="6" y="2.5" width="12" height="19" rx="2.5" /><path d="M10 18h4" /></svg>
+              </span>
+              <h3>Paspoort voor leerlingen</h3>
+              <p>Op de eigen telefoon zien wat al goed gaat. Geen account nodig.</p>
+            </a>
+          </li>
+          <li>
+            <a class="feature" href="#trainers">
+              <span class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="9" r="5.5" /><path d="M9 14l-1.5 7.5L12 19l4.5 2.5L15 14" /></svg>
+              </span>
+              <h3>Diploma of bandje</h3>
+              <p>Leg vast wanneer een diploma, bandje of insigne is uitgereikt.</p>
+            </a>
+          </li>
+          <li>
+            <a class="feature" href="#beheerders">
+              <span class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="4" rx="1" /><path d="M5 8v11a1 1 0 001 1h12a1 1 0 001-1V8M10 12h4" /></svg>
+              </span>
+              <h3>Leerling deactiveren <span class="badge-new">Nieuw</span></h3>
+              <p>Gestopt? Uit de groepen, paspoort uit, voortgang bewaard.</p>
+            </a>
+          </li>
+          <li>
+            <a class="feature" href="inloggen/">
+              <span class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><circle cx="8" cy="15" r="4.5" /><path d="M11.2 11.8L20 3M16.5 6.5l3 3" /></svg>
+              </span>
+              <h3>Geen wachtwoord</h3>
+              <p>Inloggen met je e-mailadres en een code. Beheerders nodigen trainers uit.</p>
+            </a>
+          </li>
+          <li>
+            <a class="feature" href="#trainers">
+              <span class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2.5" /><path d="M3 9h18" /></svg>
+              </span>
+              <h3>Werkt in de browser</h3>
+              <p>Op elke telefoon, zonder installatie. Met één hand te bedienen.</p>
+            </a>
+          </li>
+        </ul>
+      </section>
+
       <section id="video" class="section band" aria-labelledby="video-title">
         <div class="wrap split video-split">
           <div>
@@ -125,8 +210,7 @@
             <h2 id="video-title">Zo werkt Stride</h2>
             <div class="prose">
               <p>
-                Een trainer beoordeelt drie leerlingen tijdens de les, deelt
-                daarna het paspoort, en de leerling ziet op de eigen telefoon
+                Beoordelen tijdens de les, paspoort delen, en de leerling ziet
                 wat al goed gaat.
               </p>
             </div>
@@ -148,26 +232,20 @@
         </div>
       </section>
 
-      <section id="meer" class="section wrap" aria-labelledby="lesson-title">
+      <section id="trainers" class="section wrap role" aria-labelledby="trainers-title">
         <div class="split">
           <div>
-            <p class="overline">Tijdens de les</p>
-            <h2 id="lesson-title">Beoordelen in één tik</h2>
+            <p class="overline">Voor trainers</p>
+            <h2 id="trainers-title">Beoordelen tijdens de les</h2>
           </div>
-          <div class="prose">
-            <p>
-              Trainers kiezen een vaardigheid en zien de hele groep onder elkaar.
-              Per leerling tikken ze onvoldoende, neutraal of goed. Elke tik telt
-              als beoordeling en wordt direct opgeslagen; een vergissing maak je
-              meteen ongedaan. De knoppen tellen mee, en onder de naam staat de
-              laatste beoordeling.
-              Een leerling afzonderlijk beoordelen kan ook.
-            </p>
-            <p>
-              Stride werkt in de browser van de telefoon, installeren is niet
-              nodig. De knoppen zijn met één hand te bedienen, langs de kant of
-              aan de badrand.
-            </p>
+          <div>
+            <ul class="checks">
+              <li>Kies een vaardigheid en beoordeel de hele groep onder elkaar.</li>
+              <li>Of loop alle vaardigheden van één leerling door.</li>
+              <li>Zie per groep hoe ver iedereen is.</li>
+              <li>Niveau gehaald? Leg ook de uitreiking vast.</li>
+            </ul>
+            <p class="role-link"><a href="inloggen/">Zo log je in als trainer</a></p>
           </div>
         </div>
         <div class="shots">
@@ -184,9 +262,7 @@
                 />
               </div>
             </div>
-            <figcaption>
-              Kies een vaardigheid en beoordeel de hele groep.
-            </figcaption>
+            <figcaption>De hele groep in één scherm.</figcaption>
           </figure>
           <figure>
             <div class="phone">
@@ -201,111 +277,138 @@
                 />
               </div>
             </div>
-            <figcaption>
-              Of loop alle vaardigheden van één leerling door.
-            </figcaption>
+            <figcaption>Of één leerling, vaardigheid voor vaardigheid.</figcaption>
           </figure>
           <figure>
             <div class="phone">
               <div class="screen">
                 <img
-                  src="img/home.webp"
-                  data-dark="img/home-dark.webp"
+                  src="img/groep.webp"
+                  data-dark="img/groep-dark.webp"
                   width="390"
                   height="844"
                   loading="lazy"
-                  alt="Startscherm van Stride met tegels voor mijn groepen, groepen, leden, niveaus, trainers en paspoorten."
+                  alt="Een groep met per niveau hoeveel leerlingen het hebben afgerond."
                 />
               </div>
             </div>
-            <figcaption>Je eigen groepen staan bovenaan.</figcaption>
+            <figcaption>Per groep zie je hoe ver iedereen is.</figcaption>
+          </figure>
+          <figure>
+            <div class="phone">
+              <div class="screen">
+                <img
+                  src="img/bandje.webp"
+                  data-dark="img/bandje-dark.webp"
+                  width="390"
+                  height="844"
+                  loading="lazy"
+                  alt="Een behaald niveau 5 met een knop om de uitreiking vast te leggen; deze club werkt met bandjes."
+                />
+              </div>
+            </div>
+            <figcaption>Niveau gehaald? Leg de uitreiking vast.</figcaption>
           </figure>
         </div>
       </section>
 
-      <section class="section band" aria-labelledby="levels-title">
+      <section id="beheerders" class="section band role" aria-labelledby="admins-title">
         <div class="wrap">
           <div class="split">
             <div>
-              <p class="overline">Niveaus en voortgang</p>
-              <h2 id="levels-title">De voortgang hoort bij de leerling</h2>
+              <p class="overline">Voor clubbeheerders</p>
+              <h2 id="admins-title">De club op orde</h2>
             </div>
-            <div class="prose">
-              <p>
-                De niveaus en vaardigheden bepaalt iedere club zelf, net als
-                wanneer een niveau behaald is. Hoort er een diploma, bandje of
-                insigne bij, dan registreert de trainer ook de uitreiking.
-                Wisselt een leerling van groep of trainer, dan gaat de
-                voortgang mee.
-              </p>
-              <p>
-                Trainers loggen in met hun e-mailadres en een code, zonder
-                wachtwoord. Beheerders nodigen trainers uit en bepalen wie wat
-                mag.
-                <a href="inloggen/">Zo werkt inloggen</a>.
-              </p>
+            <div>
+              <ul class="checks">
+                <li>Meerdere sporten, elk met eigen niveaus en groepen. <span class="badge-new">Nieuw</span></li>
+                <li>Leerling gestopt? Deactiveren haalt de leerling uit de groepen en zet het paspoort uit. De voortgang blijft bewaard. <span class="badge-new">Nieuw</span></li>
+                <li>Trainers uitnodigen en bepalen wie wat mag.</li>
+                <li>Toestemming voor paspoorten op één plek.</li>
+                <li>Correcties: een beoordeling wissen of een datum aanpassen.</li>
+              </ul>
+              <p class="role-link"><a href="inloggen/beheerders/">Trainers uitnodigen en toegang beheren</a></p>
             </div>
           </div>
           <div class="shots">
             <figure>
               <div class="phone">
-                <div class="screen">
+                <div class="screen sport-2">
                   <img
-                    src="img/groep.webp"
-                    data-dark="img/groep-dark.webp"
+                    src="img/sporten.webp"
+                    data-dark="img/sporten-dark.webp"
                     width="390"
                     height="844"
                     loading="lazy"
-                    alt="Een groep met per niveau hoeveel leerlingen het hebben afgerond."
+                    alt="Startscherm met bovenaan een keuze tussen IJs en Inline; Inline is gekozen en de tegels tonen de inlinegroep."
                   />
                 </div>
               </div>
-              <figcaption>Per groep zie je hoe ver iedereen is.</figcaption>
+              <figcaption>Wissel van sport, groepen en niveaus gaan mee.</figcaption>
             </figure>
             <figure>
               <div class="phone">
                 <div class="screen">
                   <img
-                    src="img/bandje.webp"
-                    data-dark="img/bandje-dark.webp"
+                    src="img/deactiveren.webp"
+                    data-dark="img/deactiveren-dark.webp"
                     width="390"
                     height="844"
                     loading="lazy"
-                    alt="Een behaald niveau 5 met een knop om de uitreiking vast te leggen; deze club werkt met bandjes."
+                    alt="Bevestiging bij het deactiveren van een leerling: uit 3 groepen gehaald, paspoort uitgezet, voortgang vergrendeld, voor de hele club, met een melding over een bandje dat nog niet is uitgedeeld."
                   />
                 </div>
               </div>
-              <figcaption>
-                Niveau gehaald? Dan leg je ook de uitreiking vast.
-              </figcaption>
+              <figcaption>Je ziet vooraf wat deactiveren doet.</figcaption>
+            </figure>
+            <figure>
+              <div class="phone">
+                <div class="screen">
+                  <img
+                    src="img/ledenfilter.webp"
+                    data-dark="img/ledenfilter-dark.webp"
+                    width="390"
+                    height="844"
+                    loading="lazy"
+                    alt="De ledenlijst met het filter Ook inactief: een inactieve leerling staat bovenaan met de datum sinds wanneer."
+                  />
+                </div>
+              </div>
+              <figcaption>Inactieve leerlingen blijven vindbaar.</figcaption>
+            </figure>
+            <figure>
+              <div class="phone">
+                <div class="screen">
+                  <img
+                    src="img/paspoorten.webp"
+                    data-dark="img/paspoorten-dark.webp"
+                    width="390"
+                    height="844"
+                    loading="lazy"
+                    alt="Het paspoortenoverzicht voor beheerders: 5 actief, 4 niet gedeeld en 3 zonder toestemming."
+                  />
+                </div>
+              </div>
+              <figcaption>Welke paspoorten zijn gedeeld?</figcaption>
             </figure>
           </div>
         </div>
       </section>
 
-      <section
-        id="paspoort"
-        class="section wrap"
-        aria-labelledby="passport-title"
-      >
+      <section id="leerlingen" class="section wrap role" aria-labelledby="pupils-title">
         <div class="split">
           <div>
-            <p class="overline">Voor leerlingen</p>
-            <h2 id="passport-title">Een paspoort om mee te kijken</h2>
+            <p class="overline">Voor leerlingen en ouders</p>
+            <h2 id="pupils-title">Een paspoort om mee te kijken</h2>
           </div>
-          <div class="prose">
-            <p>
-              Via een persoonlijk paspoort zien leerlingen op hun eigen telefoon
-              aan welk niveau ze werken en welke vaardigheden al goed gaan. Een
-              account is niet nodig. Het paspoort toont geen cijfers en alleen
-              de voornaam van de leerling.
-            </p>
-            <p>
-              Delen kan pas als een beheerder heeft vastgelegd dat er
-              toestemming is. Daarna deelt de trainer het paspoort op een
-              moment dat past, via een QR-code of een link. Een link is altijd
-              te vervangen of uit te zetten.
-            </p>
+          <div>
+            <ul class="checks">
+              <li>Op de eigen telefoon, zonder account.</li>
+              <li>Zie aan welk niveau je werkt en wat al goed gaat.</li>
+              <li>Alle sporten in één paspoort.</li>
+              <li>Alleen de voornaam, geen cijfers.</li>
+              <li>Pas te delen na toestemming. De link is altijd uit te zetten.</li>
+            </ul>
           </div>
         </div>
         <div class="shots">
@@ -318,7 +421,7 @@
                   width="390"
                   height="844"
                   loading="lazy"
-                  alt="Het paspoort van een leerling die niveau 5 heeft gehaald en bezig is met niveau 6: 8 van de 11 vaardigheden al goed, met de vaardigheden om nog te oefenen bovenaan."
+                  alt="Het paspoort van een leerling die 2 sporten doet: inline skaten niveau 2 gehaald, bezig met niveau 3 met 6 van de 11 vaardigheden al goed, en de vaardigheden om nog te oefenen."
                 />
               </div>
             </div>
@@ -337,45 +440,32 @@
                 />
               </div>
             </div>
-            <figcaption>Deel het paspoort via QR-code of link.</figcaption>
-          </figure>
-          <figure>
-            <div class="phone">
-              <div class="screen">
-                <img
-                  src="img/paspoorten.webp"
-                  data-dark="img/paspoorten-dark.webp"
-                  width="390"
-                  height="844"
-                  loading="lazy"
-                  alt="Het paspoortenoverzicht voor beheerders: 5 actief, 4 niet gedeeld en 3 zonder toestemming."
-                />
-              </div>
-            </div>
-            <figcaption>Beheerders zien hoeveel paspoorten er gedeeld zijn.</figcaption>
+            <figcaption>De trainer deelt via QR-code of link.</figcaption>
           </figure>
         </div>
       </section>
 
-      <section class="section wrap split" aria-labelledby="clubs-title">
-        <div>
-          <p class="overline">In gebruik</p>
-          <h2 id="clubs-title">Ontstaan op het ijs</h2>
-        </div>
-        <div class="prose">
-          <div class="club">
-            <span class="club-badge" aria-hidden="true">D</span>
-            <div>
-              <p class="club-name">DIJC</p>
-              <p class="club-kind">Kunstschaatsen</p>
-            </div>
+      <section class="band" aria-labelledby="clubs-title">
+        <div class="section wrap split">
+          <div>
+            <p class="overline">In gebruik</p>
+            <h2 id="clubs-title">Ontstaan op het ijs</h2>
           </div>
-          <p>
-            Stride is ontstaan bij kunstschaatsclub DIJC, waar de trainers er
-            wekelijks mee werken onder de naam IJsvrij. Iedere club krijgt een
-            eigen adres en eigen niveaus. Zo past Stride bij elke sport die met
-            niveaus werkt, van zwemles tot turnen of judo.
-          </p>
+          <div class="prose">
+            <div class="club">
+              <span class="club-badge" aria-hidden="true">D</span>
+              <div>
+                <p class="club-name">DIJC</p>
+                <p class="club-kind">Kunstschaatsen · Inline skaten</p>
+              </div>
+            </div>
+            <p>
+              Stride is ontstaan bij kunstschaatsclub DIJC, waar trainers er
+              wekelijks mee werken, op het ijs en op inline skates. Iedere club
+              krijgt een eigen adres, eigen sporten en eigen niveaus: van
+              zwemles tot turnen of judo.
+            </p>
+          </div>
         </div>
       </section>
 
