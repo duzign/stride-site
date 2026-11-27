@@ -546,6 +546,10 @@ a:focus-visible,
   font-weight: 500;
 }
 
+.prose .club-kind {
+  margin-top: 0;
+}
+
 .club-kind {
   color: var(--ink-muted);
   font-size: 0.9rem;
@@ -580,11 +584,237 @@ a:focus-visible,
   padding-bottom: 24px;
 }
 
+/* A screenshot taken in the club's second sport: the app tints its header, so the status bar follows. */
+.screen.sport-2 {
+  background: #2b5c59;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .screen.sport-2 {
+    background: #1d3d3b;
+  }
+}
+
+:root[data-theme="dark"] .screen.sport-2 {
+  background: #1d3d3b;
+}
+
+/* Role chips in the hero: jump to the section for trainers, club admins or pupils. */
+
+.nav-extra {
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .nav-extra {
+    display: inline-flex;
+  }
+}
+
+.roles {
+  margin-top: 36px;
+}
+
+.roles-label {
+  font-size: 0.9rem;
+  color: var(--on-header-muted);
+  margin-bottom: 10px;
+}
+
+.role-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.role-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 0 18px;
+  border-radius: 999px;
+  background: rgb(255 255 255 / 0.12);
+  color: var(--on-header);
+  font-weight: 500;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: background-color 120ms;
+}
+
+.role-chip::after {
+  content: "↓";
+  color: var(--accent);
+}
+
+.role-chip:hover {
+  background: rgb(255 255 255 / 0.22);
+}
+
+.role-chip:focus-visible {
+  outline: 2px solid var(--on-header);
+  outline-offset: 2px;
+}
+
+/* Feature overview: one card per capability, each linking to where it is shown. */
+
+#functies h2 {
+  margin-bottom: 32px;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.feature {
+  display: grid;
+  align-content: start;
+  gap: 6px;
+  height: 100%;
+  padding: 20px;
+  border-radius: var(--radius-lg);
+  background: var(--surface-raised);
+  color: var(--ink);
+  text-decoration: none;
+  transition:
+    background-color 120ms,
+    transform 120ms;
+}
+
+.feature:hover {
+  background: var(--primary-soft);
+}
+
+.feature:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.feature h3 {
+  margin: 8px 0 0;
+}
+
+.feature p {
+  color: var(--ink-muted);
+  font-size: 0.95rem;
+}
+
+.feature-icon {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  background: var(--primary-soft);
+  color: var(--primary);
+}
+
+.feature:hover .feature-icon {
+  background: var(--surface);
+}
+
+.feature-icon svg {
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+@media (max-width: 639px) {
+  .features {
+    gap: 10px;
+  }
+
+  .feature {
+    grid-template-columns: 44px 1fr;
+    column-gap: 14px;
+    row-gap: 2px;
+    padding: 14px 16px;
+  }
+
+  .feature-icon {
+    grid-row: span 2;
+  }
+
+  .feature h3 {
+    margin: 0;
+  }
+}
+
+.badge-new {
+  display: inline-block;
+  margin-left: 4px;
+  padding: 1px 8px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--on-accent);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  vertical-align: 2px;
+}
+
+/* Role sections: a short checklist next to the heading, screenshots below. */
+
+.checks {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 1.05rem;
+  max-width: 34em;
+}
+
+.checks li {
+  position: relative;
+  padding-left: 22px;
+}
+
+.checks li::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 0.62em;
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--accent);
+}
+
+.role-link {
+  margin-top: 20px;
+  font-weight: 500;
+}
+
+.role .shots {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 230px));
+}
+
+@media (max-width: 639px) {
+  .role .shots {
+    grid-template-columns: none;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
   }
 
+  .role-chip,
+  .feature,
   .btn,
   .theme-switch-thumb,
   .theme-switch-track svg {
